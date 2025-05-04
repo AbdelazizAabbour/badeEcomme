@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="./styleContact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="fixed-top bg-white">
+        <div class="container-fluid">
+            <div class="row align-items-center py-3">
+                <div class="col-md-4">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Rechercher....">
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="#" class="logo"></a>
+                </div>
+                <div class="col-md-4 text-end">
+                    <nav class="top-nav">
+                        <a href="#" class="nav-link">SE CONNECTER</a>
+                        <span class="separator">|</span>
+                        <a href="#" class="nav-link">REGISTER</a>
+                        <a href="#" class="icon-link ms-3"><i class="far fa-user"></i></a>
+                        <a href="#" class="icon-link ms-2"><i class="far fa-heart"></i></a>
+                        <a href="#" class="icon-link ms-2"><i class="fas fa-shopping-bag"></i></a>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <nav class="main-nav text-center">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="shope.html" class="nav-link">Shop Now</a></li>
+                            <li class="nav-item"><a href="aboutUs.html" class="nav-link">About Us</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+
+    <header class="contact-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour vous aider. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+        </div>
+    </header>
+    
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <div id="successMessage" class="success-message">
+                            <i class="fas fa-check-circle me-2"></i> Votre message a été envoyé avec succès. Nous vous contacterons bientôt!
+                        </div>
+                        
+                        <form id="contactForm" onsubmit="return validateForm()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">Prénom <span class="required-mark">*</span></label>
+                                        <div class="input-with-icon">
+                                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Votre prénom" required>
+                                            <span class="input-icon"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Nom <span class="required-mark">*</span></label>
+                                        <div class="input-with-icon">
+                                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Votre nom" required>
+                                            <span class="input-icon"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email <span class="required-mark">*</span></label>
+                                        <div class="input-with-icon">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre adresse email" required>
+                                            <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Téléphone <span class="required-mark">*</span></label>
+                                        <div class="input-with-icon">
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+                                            <span class="input-icon"><i class="fas fa-phone"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address" class="form-label">Adresse</label>
+                                <div class="input-with-icon">
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Votre adresse complète">
+                                    <span class="input-icon"><i class="fas fa-home"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="city" class="form-label">Ville</label>
+                                        <div class="input-with-icon">
+                                            <input type="text" class="form-control" id="city" name="city" placeholder="Votre ville">
+                                            <span class="input-icon"><i class="fas fa-city"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="postalCode" class="form-label">Code postal</label>
+                                        <div class="input-with-icon">
+                                            <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Votre code postal">
+                                            <span class="input-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Sujet <span class="required-mark">*</span></label>
+                                <div class="input-with-icon">
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="" disabled selected>Sélectionnez un sujet</option>
+                                        <option value="information">Demande d'information</option>
+                                        <option value="order">Commander un produit</option>
+                                        <option value="support">Support technique</option>
+                                        <option value="feedback">Commentaires et suggestions</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-question-circle"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message <span class="required-mark">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+                            </div>
+                            
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <p>J'accepte que mes données personnelles soient traitées conformément à la politique de confidentialité. <span class="required-mark">*</span></p>
+                            </div>
+                            
+                            <div class="form-group mb-0">
+                                <button type="submit" class="btn btn-submit">
+                                    <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <div>
+                            <h2>Informations de contact</h2>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h4>Adresse</h4>
+                                    <p>Casablanca, Sidi Moumen Rue 108 Hassane Esousi</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h4>Téléphone</h4>
+                                    <a href="tel:+212-777-996-998">+212-777-996-998</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h4>Email</h4>
+                                    <a href="mailto:aabbourabdelaziz@gmail.com">aabbourabdelaziz@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-detail">
+                                    <h4>Heures d'ouverture</h4>
+                                    <p>Lundi - Vendredi: 9h - 18h<br>
+                                    Samedi: 10h - 16h<br>
+                                    Dimanche: Fermé</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="mb-3">Suivez-nous</h4>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/profile.php?id=100091736677761" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/aziz__abour?igsh=MXF4Mng1ZWRpbmFncw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://whatsapp.com/dl/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <footer class="custom-footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h5>Abdelaziz Aabbour</h5>
+            <p>Boutique de qualité pour vos meubles et décorations d'intérieur. Canapés, accessoires et plus encore à des prix imbattables.</p>
+          </div>
+      
+          <div class="footer-column">
+            <h5>Liens utiles</h5>
+            <a href="index.html">Accueil</a>
+            <a href="shope.html">Shop</a>
+            <a href="aboutUs.html">À propos</a>
+            <a href="contact.html">Contact</a>
+          </div>
+      
+          <div class="footer-column">
+            <h5>Contact</h5>
+            <p><i class="fas fa-home"></i> Casablanca, Maroc</p>
+            <p><i class="fas fa-envelope"></i> aabbourabdelaziz@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +212 7 77 99 69 98</p>
+          </div>
+        </div>
+      
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=100091736677761" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/aziz__abour?igsh=MXF4Mng1ZWRpbmFncw==" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://whatsapp.com/dl/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025 Abdealziza Aabbour. Tous droits réservés.</p>
+        </div>
+      </footer>
+      
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
